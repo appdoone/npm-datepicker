@@ -1,4 +1,4 @@
-# Material DatePicker by CoachCare
+# Material DatePicker by Appdoone
 
 Fork of the official Material Datepicker for Angular v6 with timepicker support.
 
@@ -34,13 +34,13 @@ and the `input[matDatepicker]` has the _output_:
 
 ## Installation
 
-As usual run `yarn add @coachcare/datepicker` or `npm install @coachcare/datepicker`.  
+As usual run `yarn add @appdoone/datepicker` or `npm install @appdoone/datepicker`.  
 This module requires `moment` and `moment-timezone` for the MomentDateAdapter.
 
 Now add the modules to your Angular Module:
 
 ```
-import { MatDatepickerModule, MatMomentDateModule } from '@coachcare/datepicker';
+import { MatDatepickerModule, MatMomentDateModule } from '@appdoone/datepicker';
 
 @NgModule({
   imports: [
@@ -63,7 +63,7 @@ This module supports the Angular Material prebuilt themes that can be included i
 
 ```
 "styles": [
-  "node_modules/@coachcare/datepicker/prebuilt-themes/indigo-pink.css",
+  "node_modules/@appdoone/datepicker/prebuilt-themes/indigo-pink.css",
   ...
 ],
 ```
@@ -73,7 +73,7 @@ available themes are `deeppurple-amber`, `indigo-pink`, `pink-bluegrey` and `pur
 You can use your customized Material Theme as usual:
 
 ```
-@import '~@coachcare/datepicker/theming';
+@import '~@appdoone/datepicker/theming';
 
 @include mat-datepicker-theme($theme);
 ```
@@ -117,7 +117,7 @@ so please check [this file](https://github.com/selvera/npm-datepicker/blob/maste
 
 ## Contribute
 
-Feedback and suggestions are welcome, also gratitude demonstrations :)
+Feedback and suggestions are welcome, also gratitude demonstrations (for original author) :)
 https://www.paypal.me/mateotp
 
 Enjoy!
