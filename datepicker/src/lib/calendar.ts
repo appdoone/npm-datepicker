@@ -132,6 +132,21 @@ export class MatCalendar<D> implements AfterContentInit, AfterViewChecked, OnCha
   @Input()
   clockStep = 1;
 
+  /** Ok button visualization */
+  @Input()
+  showOkButton = false;
+
+  /** Cancel button visualization */
+  @Input()
+  showCancelButton = false;
+
+  /** Cancel button visualization */
+  @Input()
+  buttonsLabelCfg = {
+      ok: 'Ok',
+      cancel: 'Cancel'
+  };
+
   /** Clock hour format */
   @Input()
   twelveHour = false;
