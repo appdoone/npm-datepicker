@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@appdoone/datepicker",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Angular Material Datepicker Fork with Timepicker by Appdoone",
   "keywords": [
     "appdoone",
