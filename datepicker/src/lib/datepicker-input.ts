@@ -21,6 +21,11 @@ import {
   Output
 } from '@angular/core';
 import {
+  CanColor,
+  mixinColor,
+  ThemePalette,
+} from '@angular/material/core';
+import {
   AbstractControl,
   ControlValueAccessor,
   NG_VALIDATORS,
@@ -357,6 +362,11 @@ export class MatDatepickerInput<D> implements AfterContentInit, ControlValueAcce
 
   _onChange() {
     this.dateChange.emit(new MatDatepickerInputEvent(this, this._elementRef.nativeElement));
+  }
+
+  /** Returns the palette used by the input's form field, if any. */
+  _getThemePalette(): ThemePalette {
+    return this._formField ? this._formField.color : undefined;
   }
 
   /** Handles blur events on the input. */
