@@ -2,7 +2,7 @@ version: 2
 
 defaults: &defaults
   docker:
-    - image: circleci/node:$NODE_VERSION
+    - image: circleci/node:7.0.0
 
 jobs:
   setup:
