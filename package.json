@@ -13,7 +13,10 @@
   "author": "Appdoone",
   "homepage": "https://appdoone.com",
   "license": "MIT",
-  "repository": "github:appdoone/npm-datepicker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appdoone/npm-datepicker.git"
+  },
   "bugs": {
     "url": "https://github.com/appdoone/npm-datepicker.git/issues"
   },
@@ -72,5 +75,6 @@
       "postbump": "npm run dist",
       "posttag": "git push --follow-tags origin master"
     }
-  }
+  },
+  "main": "index.js"
 }
