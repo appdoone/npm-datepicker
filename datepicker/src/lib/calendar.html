@@ -126,17 +126,21 @@
     </mat-years-view>
   </div>
 
-  <div class="mat-calendar-footer">
+  <div 
+    *ngIf="showOkButton || showCancelButton"
+    class="mat-calendar-footer">
     <button mat-button
+    *ngIf="showCancelButton"
     (click)="_cancelClicked()"
-    [attr.aria-label]="_intl.buttonCancelLabel">
-      {{ _intl.buttonCancelText }}
+    [attr.aria-label]="buttonsLabelCfg.cancel">
+      {{ buttonsLabelCfg.cancel }}
     </button>
 
     <button mat-button
+    *ngIf="showOkButton"
     (click)="_submitClicked()"
-    [attr.aria-label]="_intl.buttonSubmitLabel">
-      {{ _intl.buttonSubmitText }}
+    [attr.aria-label]="buttonsLabelCfg.ok">
+      {{ buttonsLabelCfg.ok }}
     </button>
   </div>
 </div>
