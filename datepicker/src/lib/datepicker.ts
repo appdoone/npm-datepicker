@@ -30,6 +30,11 @@ import {
   ViewContainerRef,
   ViewEncapsulation
 } from '@angular/core';
+import {
+  CanColor,
+  mixinColor,
+  ThemePalette,
+} from '@angular/material/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { take, filter } from 'rxjs/operators';
 import { merge, Subject, Subscription } from 'rxjs';
@@ -134,6 +139,17 @@ export class MatDatepicker<D> implements OnInit, OnDestroy {
     this._startAt = this._getValidDateOrNull(this._dateAdapter.deserialize(value));
   }
   private _startAt: D | null;
+
+  /** Color palette to use on the datepicker's calendar. */
+  @Input()
+  get color(): ThemePalette {
+    return this._color ||
+        (this._datepickerInput ? this._datepickerInput._getThemePalette() : undefined);
+  }
+  set color(value: ThemePalette) {
+    this._color = value;
+  }
+  _color: ThemePalette;
 
   /** The type of value handled by the calendar. */
   @Input()
