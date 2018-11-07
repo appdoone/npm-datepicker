@@ -163,6 +163,21 @@ export class MatDatepicker<D> implements OnInit, OnDestroy {
   @Input()
   clockStep = 1;
 
+  /** Ok button visualization */
+  @Input()
+  showOkButton = false;
+
+  /** Cancel button visualization */
+  @Input()
+  showCancelButton = false;
+
+  /** Cancel button visualization */
+  @Input()
+  buttonsLabelCfg = {
+      ok: 'Ok',
+      cancel: 'Cancel'
+  };
+
   /** Clock hour format */
   @Input()
   twelveHour = true;
@@ -178,7 +193,7 @@ export class MatDatepicker<D> implements OnInit, OnDestroy {
   set touchUi(value: boolean) {
     this._touchUi = coerceBooleanProperty(value);
   }
-  private _touchUi = true;
+  private _touchUi = false;
 
   /** Whether the datepicker pop-up should be disabled. */
   @Input()
