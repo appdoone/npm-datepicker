@@ -57,25 +57,7 @@
     margin: -24px;
   }
 
-  @media all and (orientation: landscape) {
-    .mat-calendar {
-      width: $mat-datepicker-touch-landscape-width;
-      height: $mat-datepicker-touch-landscape-height;
-
-      max-width: $mat-datepicker-touch-landscape-max-width;
-      max-height: $mat-datepicker-touch-landscape-max-height;
-
-      .mat-calendar-header {
-        width: $mat-datepicker-touch-landscape-header;
-        max-width: $mat-datepicker-touch-landscape-max-header;
-      }
-      .mat-calendar-content {
-        flex: 1 1 100%;
-      }
-    }
-  }
-
-  @media all and (orientation: portrait) {
+  
     .mat-calendar {
       width: $mat-datepicker-touch-portrait-width;
       height: $mat-datepicker-touch-portrait-height;
@@ -94,5 +76,4 @@
         flex: 1 1 100%;
       }
     }
-  }
 }

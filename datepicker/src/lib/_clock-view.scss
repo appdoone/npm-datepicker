@@ -24,22 +24,15 @@
     border-radius: 50%;
   }
 
-  @media all and (orientation: portrait) {
+  
     .mat-clock {
       height: 0;
       width: 100%;
       padding-top: 100%;
     }
-  }
+  
 
-  @media all and (orientation: landscape) {
-    .mat-clock {
-      height: 100%;
-      width: 0;
-      margin-left: 10%;
-      padding-right: 80%;
-    }
-  }
+  
 
   .mat-clock-center {
     position: absolute;
