@@ -138,7 +138,7 @@
     }
   }
 
-  @media all and (orientation: portrait) {
+  
     .mat-calendar {
       .mat-calendar-header {
         align-items: flex-start;
@@ -196,65 +196,7 @@
         place-content: center;
       }
     }
-  }
-
-  @media all and (orientation: landscape) {
-    .mat-calendar {
-      .mat-calendar-header {
-        align-items: stretch;
-        flex-direction: column;
-        place-content: stretch flex-start;
-        padding: $mat-calendar-padding * 2 0;
-
-        .mat-calendar-header-date {
-          padding: 0 $mat-calendar-padding * 2;
-
-          .mat-calendar-header-date-year {
-            margin-bottom: 3px;
-          }
-          .mat-calendar-header-date-month {
-            font-size: 30px;
-            line-height: 32px;
-            span {
-              display: block;
-            }
-          }
-        }
-
-        .mat-calendar-header-time {
-          align-items: center;
-          place-content: center flex-start;
-          padding: 0 $mat-calendar-padding * 2;
-
-          .mat-calendar-header-time-hour,
-          .mat-calendar-header-time-hour > button {
-            font-size: 32px;
-            line-height: 40px;
-          }
-          .mat-calendar-header-time-ampm {
-            padding-left: 5px;
-            width: 30px;
-
-            button {
-              font-size: 15px;
-              line-height: 16px;
-            }
-          }
-        }
-      }
-
-      .mat-calendar-type-time {
-        align-items: center;
-        place-content: center;
-
-        .mat-calendar-header-time {
-          flex-direction: column;
-          place-content: center;
-          align-items: center;
-        }
-      }
-    }
-  }
+  
 
   /* Caledar types customizations */
   .mat-calendar-type-date {
