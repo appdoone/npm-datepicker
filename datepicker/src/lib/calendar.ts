@@ -142,9 +142,14 @@ export class MatCalendar<D> implements AfterContentInit, AfterViewChecked, OnCha
 
   /** Cancel button visualization */
   @Input()
+  showClearButton = false;
+
+  /** Cancel button visualization */
+  @Input()
   buttonsLabelCfg = {
       ok: 'Ok',
-      cancel: 'Cancel'
+      cancel: 'Cancel',
+      clear: 'Clear'
   };
 
   /** Clock hour format */
@@ -361,6 +366,11 @@ export class MatCalendar<D> implements AfterContentInit, AfterViewChecked, OnCha
 
   _submitClicked(): void {
     this.selectedChange.emit(this.activeDate);
+    this._userSelection.emit();
+  }
+
+  _clearClicked(): void {
+      this.selectedChange.emit(null);
     this._userSelection.emit();
   }
 

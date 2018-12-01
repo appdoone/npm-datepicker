@@ -127,8 +127,16 @@
   </div>
 
   <div 
-    *ngIf="showOkButton || showCancelButton"
+    *ngIf="showOkButton || showCancelButton || showClearButton"
     class="mat-calendar-footer">
+
+    <button mat-button
+        *ngIf="showClearButton"
+        (click)="_clearClicked()"
+        [attr.aria-label]="buttonsLabelCfg.clear">
+        {{ buttonsLabelCfg.clear }}
+    </button>
+
     <button mat-button
     *ngIf="showCancelButton"
     (click)="_cancelClicked()"
