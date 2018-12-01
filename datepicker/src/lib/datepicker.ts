@@ -173,9 +173,14 @@ export class MatDatepicker<D> implements OnInit, OnDestroy {
 
   /** Cancel button visualization */
   @Input()
+  showClearButton = false;
+
+  /** Cancel button visualization */
+  @Input()
   buttonsLabelCfg = {
       ok: 'Ok',
-      cancel: 'Cancel'
+      cancel: 'Cancel',
+      clear: 'Clear'
   };
 
   /** Clock hour format */
